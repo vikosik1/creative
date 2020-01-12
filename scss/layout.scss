@@ -3,67 +3,64 @@ $container: 1170px;
 $gap: 15px;
 $col: 12;
 $colWidth: 100% / $col;
-
 $primaryColor: #303841;
 $secondaryColor: #442a9d;
-
 $yellow: #ffc12d;
-
 $btnBorderColor: $primaryColor;
-
-
-*{
+* {
     box-sizing: border-box
 }
 
-.container{
+.container {
     max-width: $container;
     width: 100%;
     margin: 0 auto;
     padding: 0 $gap;
 }
 
+
 /* Ba-grid  */
-.ba-row{
+
+.ba-row {
     display: flex;
     flex-wrap: wrap;
     margin-left: -$gap;
     margin-right: -$gap;
 }
 
-.ba-row + .ba-row{
+.ba-row+.ba-row {
     margin-top: 1rem;
 }
 
-[class^='ba-col']{
+[class^='ba-col'] {
     padding-left: 15px;
     padding-right: 15px;
     width: 100%;
 }
 
 @for $i from 1 through $col {
-    .ba-col-#{$i}{
+    .ba-col-#{$i} {
         width: $colWidth * $i;
     }
 }
 
 @media screen and (min-width: 991px) {
-    .ba-col-md-12{
+    .ba-col-md-12 {
         width: 100%;
     }
-    .ba-col-md-11{
+    .ba-col-md-11 {
         width: 91.66%;
     }
-    .ba-col-md-10{
+    .ba-col-md-10 {
         width: 83.3%;
     }
-    .ba-col-md-9{
+    .ba-col-md-9 {
         width: 74.97%;
     }
-    .ba-col-md-8{
+    .ba-col-md-8 {
         width: 66.62%;
     }
-    .ba-col-md-7{
+    .ba-col-md-7 {
         width: 58.3%;
     }
     .ba-col-md-6 {
@@ -84,42 +81,38 @@ $btnBorderColor: $primaryColor;
     .ba-col-md-1 {
         width: 8.33%;
     }
-
     .hidden-md {
         display: none;
     }
 }
 
+@media screen and (max-width:990px) {
+    .ba-user__link {
+        display: none !important;
+    }
+}
 
 // mixins
 @mixin buttonHover {
     background-color: pink;
-    border-color: darken($btnBorderColor, 15%)
-
+    border-color: darken($btnBorderColor, 15%);
 }
-
-
 
 
 /* ba-common */
 
-.ba-text-center{
+.ba-text-center {
     text-align: center;
 }
 
-.ba-text-left{
+.ba-text-left {
     text-align: left;
 }
-.ba-text-right{
+
+.ba-text-right {
     text-align: right;
 }
-.ba-text-justify{
+
+.ba-text-justify {
     text-align: justify;
 }
-
-
-
-
-
-
-
